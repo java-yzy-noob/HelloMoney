@@ -35,25 +35,6 @@ public class BubbleSort {
 
     }
 
-    private static void sort1(int[] array){
-        for (int i = 1; i < array.length; i++){
-            boolean flag = true;
-            for (int j = 0; j < array.length - 1; j++){
-                if (array[j] > array[j + 1]){
-                    int temp =array[j];
-                    array[j] = array[j + 1];
-                    array[j + 1] = temp;
-                    flag = false;
-                }
-            }
-            if (flag){
-                break;
-            }
-            System.out.println("冒泡第" + i + "次");
-        }
-        Arrays.stream(array).forEach(System.out::print);
-
-    }
 
     //遍历显示数组
     public static void display(int[] array){
@@ -67,7 +48,7 @@ public class BubbleSort {
         System.out.println("未排序数组顺序为：");
         display(array);
         System.out.println("-----------------------");
-        sort1(array);
+        sort(array);
         System.out.println("-----------------------");
         System.out.println("经过冒泡排序后的数组顺序为：");
         display(array);
